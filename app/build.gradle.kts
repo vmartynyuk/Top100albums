@@ -26,14 +26,12 @@ android {
 }
 
 dependencies {
+    implementation(project(":core:ui"))
+
     implementation(Libs.androidx_activity_compose)
     implementation(Libs.androidx_appcompat)
     implementation(Libs.androidx_coreKtx)
     implementation(Libs.material)
-
-    implementation(Libs.androidx_compose_foundation)
-    implementation(Libs.androidx_compose_foundation_layout)
-    implementation(Libs.androidx_compose_material)
 
     implementation(Libs.hilt_android)
     kapt(Libs.hilt_compiler)

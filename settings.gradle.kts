@@ -14,3 +14,4 @@ dependencyResolutionManagement {
 }
 rootProject.name = "Top100Albums"
 include(":app")
+include(":core:ui")
