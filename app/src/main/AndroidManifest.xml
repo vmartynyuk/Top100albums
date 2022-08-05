@@ -3,6 +3,8 @@
     xmlns:tools="http://schemas.android.com/tools"
     package="ua.vmartyniuk.top100albums">
 
+    <uses-permission android:name="android.permission.INTERNET" />
+
     <application
         android:name=".Top100AlbumsApplication"
         android:allowBackup="true"

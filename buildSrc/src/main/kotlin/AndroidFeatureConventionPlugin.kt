@@ -17,6 +17,9 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
 
                 add("implementation", Libs.androidx_hilt_navigation_compose)
 
+                add("implementation", Libs.coilKt)
+                add("implementation", Libs.coilKt_compose)
+
                 add("implementation", Libs.hilt_android)
                 add("kapt", Libs.hilt_compiler)
 

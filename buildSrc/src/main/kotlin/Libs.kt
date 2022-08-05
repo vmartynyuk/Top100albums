@@ -2,6 +2,7 @@ object Libs {
     const val android_gradlePlugin = "com.android.tools.build:gradle:${Versions.androidGradlePlugin}"
     const val hilt_gradlePlugin  = "com.google.dagger:hilt-android-gradle-plugin:${Versions.hilt}"
     const val kotlin_gradlePlugin  = "org.jetbrains.kotlin:kotlin-gradle-plugin:${Versions.kotlin}"
+    const val kotlin_serializationPlugin  = "org.jetbrains.kotlin:kotlin-serialization:${Versions.kotlin}"
 
     const val androidx_activity_compose = "androidx.activity:activity-compose:${Versions.androidxActivity}"
     const val androidx_appcompat = "androidx.appcompat:appcompat:${Versions.androidxAppCompat}"
@@ -16,7 +17,13 @@ object Libs {
     const val androidx_customview_poolingcontainer = "androidx.customview:customview-poolingcontainer:${Versions.androidxCustomView}"
     const val androidx_hilt_navigation_compose = "androidx.hilt:hilt-navigation-compose:${Versions.androidxHiltNavigationCompose}"
     const val androidx_navigation_compose = "androidx.navigation:navigation-compose:${Versions.androidxNavigation}"
+    const val coilKt = "io.coil-kt:coil:${Versions.coil}"
+    const val coilKt_compose = "io.coil-kt:coil-compose:${Versions.coil}"
     const val hilt_android = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hilt_compiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
+    const val kotlinx_serialization_json = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinxSerializationJson}"
     const val material = "com.google.android.material:material:${Versions.material}"
+    const val okhttp = "com.squareup.okhttp3:okhttp:${Versions.okhttp}"
+    const val retrofit_core = "com.squareup.retrofit2:retrofit:${Versions.retrofit}"
+    const val retrofit_kotlin_serialization = "com.jakewharton.retrofit:retrofit2-kotlinx-serialization-converter:${Versions.retrofitKotlinxSerializationJson}"
 }
