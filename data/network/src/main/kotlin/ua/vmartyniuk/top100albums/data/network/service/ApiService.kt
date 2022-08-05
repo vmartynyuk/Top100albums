@@ -7,7 +7,7 @@ import ua.vmartyniuk.top100albums.data.network.model.FeedResponse
 interface ApiService {
 
     @GET("/api/v2/{countryCode}/music/most-played/{count}/albums.json")
-    fun getAlbums(
+    suspend fun getAlbums(
         @Path("countryCode") countryCode: String,
         @Path("count") count: Int
     ): Result<FeedResponse>

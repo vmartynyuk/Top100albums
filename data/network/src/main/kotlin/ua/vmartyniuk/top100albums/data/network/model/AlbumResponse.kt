@@ -6,6 +6,7 @@ import java.util.*
 
 @Serializable
 data class AlbumResponse(
+    val id: String,
     val artistName: String,
     val name: String,
     val artworkUrl100: String,
