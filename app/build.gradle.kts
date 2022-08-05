@@ -27,6 +27,9 @@ android {
 
 dependencies {
     implementation(project(":core:ui"))
+    implementation(project(":core:navigation"))
+    implementation(project(":feature:albums"))
+    implementation(project(":feature:details"))
 
     implementation(Libs.androidx_activity_compose)
     implementation(Libs.androidx_appcompat)

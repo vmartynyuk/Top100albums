@@ -2,19 +2,27 @@ package ua.vmartyniuk.top100albums.ui
 
 import androidx.compose.foundation.layout.*
 import androidx.compose.material.Scaffold
-import androidx.compose.material.Text
-import androidx.compose.material.TopAppBar
 import androidx.compose.runtime.Composable
+import androidx.compose.runtime.getValue
+import androidx.compose.runtime.remember
 import androidx.compose.ui.Modifier
-import ua.vmartyniuk.top100albums.core.ui.theme.AppColors
+import androidx.navigation.compose.currentBackStackEntryAsState
+import androidx.navigation.compose.rememberNavController
 import ua.vmartyniuk.top100albums.core.ui.theme.Top100AlbumsTheme
+import ua.vmartyniuk.top100albums.navigation.Top100AlbumsNavHost
+import ua.vmartyniuk.top100albums.navigation.Top100AlbumsNavigation
 
 @Composable
 fun Top100AlbumsApp() {
+    val navController = rememberNavController()
+    val navigation = remember(navController) {
+        Top100AlbumsNavigation(navController)
+    }
+    val navBackStackEntry by navController.currentBackStackEntryAsState()
+    val currentDestination = navBackStackEntry?.destination
+
     Top100AlbumsTheme {
-        Scaffold(
-            topBar = { Toolbar(title = "Top 100 Albums") }
-        ) {
+        Scaffold { padding ->
             Row(
                 modifier = Modifier
                     .fillMaxSize()
@@ -24,21 +32,18 @@ fun Top100AlbumsApp() {
                         )
                     )
             ) {
-                Text(
-                    text = "Hello world",
+                Top100AlbumsNavHost(
+                    navController = navController,
+                    onNavigateToDestination = { destination, route ->
+                        navigation.navigateTo(destination, route)
+                    },
+                    onBackClick = {
+                        navigation.onBackClick()
+                    },
                     modifier = Modifier
+                        .padding(padding)
                 )
             }
         }
     }
-}
-
-@Composable
-fun Toolbar(title: String) {
-    TopAppBar(
-        backgroundColor = AppColors.White85,
-        title = {
-            Text(text = title)
-        }
-    )
 }

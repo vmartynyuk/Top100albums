@@ -14,6 +14,8 @@ object Libs {
     const val androidx_compose_ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.androidxCompose}"
     const val androidx_compose_ui_util = "androidx.compose.ui:ui-util:${Versions.androidxCompose}"
     const val androidx_customview_poolingcontainer = "androidx.customview:customview-poolingcontainer:${Versions.androidxCustomView}"
+    const val androidx_hilt_navigation_compose = "androidx.hilt:hilt-navigation-compose:${Versions.androidxHiltNavigationCompose}"
+    const val androidx_navigation_compose = "androidx.navigation:navigation-compose:${Versions.androidxNavigation}"
     const val hilt_android = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hilt_compiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
     const val material = "com.google.android.material:material:${Versions.material}"
