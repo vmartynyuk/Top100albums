@@ -9,15 +9,57 @@ import androidx.compose.ui.unit.sp
 import ua.vmartyniuk.top100albums.core.ui.R
 
 val SFProDisplay = FontFamily(
-    Font(R.font.free_net_sfpro_display_regular),
-    Font(R.font.free_net_sfpro_display_bold, FontWeight.Bold),
+    Font(R.font.sfpro_display_regular),
+    Font(R.font.sfpro_display_bold, FontWeight.Bold),
+)
+
+val SFProText = FontFamily(
+    Font(R.font.sfpro_text_regular),
+    Font(R.font.sfpro_text_bold, FontWeight.Bold),
+    Font(R.font.sfpro_text_medium, FontWeight.Medium),
+    Font(R.font.sfpro_text_semibold, FontWeight.SemiBold),
 )
 
 internal val Top100AlbumsTypography = Typography(
-    defaultFontFamily = SFProDisplay,
-    h6 = TextStyle(
+    h1 = TextStyle(
+        fontFamily = SFProDisplay,
         fontWeight = FontWeight.Bold,
         fontSize = 34.sp,
-        letterSpacing = (-1.36).sp
+        letterSpacing = (-0.04).sp
+    ),
+    h2 = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Medium,
+        fontSize = 20.sp,
+        letterSpacing = (0.01).sp,
+    ),
+    body1 = TextStyle(
+        fontFamily = SFProText,
+        fontWeight = FontWeight.Normal,
+        fontSize = 18.sp,
+        letterSpacing = (-0.04).sp,
+    ),
+    body2 = TextStyle(
+        fontFamily = SFProText,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 16.sp,
+        letterSpacing = (-0.04).sp,
+    ),
+    subtitle1 = TextStyle(
+        fontFamily = SFProDisplay,
+        fontWeight = FontWeight.Bold,
+        fontSize = 16.sp,
+        letterSpacing = (-0.04).sp,
+    ),
+    button = TextStyle(
+        fontFamily = FontFamily.Default,
+        fontWeight = FontWeight.Medium,
+        fontSize = 14.sp,
+        letterSpacing = (0.09).sp,
+    ),
+    caption = TextStyle(
+        fontFamily = SFProText,
+        fontWeight = FontWeight.Medium,
+        fontSize = 12.sp,
     ),
 )

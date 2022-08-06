@@ -11,6 +11,6 @@ data class AlbumResponse(
     val name: String,
     val artworkUrl100: String,
     @Serializable(DateSerializer::class)
-    val releaseDate: Date,
+    val releaseDate: Date?,
     val genres: List<GenreResponse> = emptyList()
 )

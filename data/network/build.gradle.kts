@@ -6,6 +6,8 @@ plugins {
 }
 
 dependencies {
+    implementation(project(":core:common"))
+
     implementation(Libs.kotlinx_serialization_json)
 
     implementation(Libs.retrofit_core)

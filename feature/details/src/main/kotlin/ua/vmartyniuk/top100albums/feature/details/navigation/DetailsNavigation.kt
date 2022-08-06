@@ -14,7 +14,7 @@ object DetailsDestination : Top100AlbumsNavigationDestination {
     override val destination = "details_destination"
 
     fun createNavigationRoute(albumIdArg: String): String {
-        val encodedId = Uri.encode(DetailsDestination.albumIdArg)
+        val encodedId = Uri.encode(albumIdArg)
         return "details_route/$encodedId"
     }
 }
