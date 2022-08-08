@@ -11,7 +11,7 @@ private val patterns = mapOf(
 )
 
 fun Date.ofPattern(pattern: String): String {
-    val sdf = SimpleDateFormat(pattern, Locale.ENGLISH)
+    val sdf = SimpleDateFormat(pattern, Locale.US)
     return sdf.format(this)
 }
 

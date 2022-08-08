@@ -13,6 +13,7 @@ object Libs {
     const val androidx_compose_material = "androidx.compose.material:material:${Versions.androidxCompose}"
     const val androidx_compose_runtime = "androidx.compose.runtime:runtime:${Versions.androidxCompose}"
     const val androidx_compose_ui_tooling = "androidx.compose.ui:ui-tooling:${Versions.androidxCompose}"
+    const val androidx_compose_ui_unit = "androidx.compose.ui:ui-unit:${Versions.androidxCompose}"
     const val androidx_compose_ui_tooling_preview = "androidx.compose.ui:ui-tooling-preview:${Versions.androidxCompose}"
     const val androidx_compose_ui_util = "androidx.compose.ui:ui-util:${Versions.androidxCompose}"
     const val androidx_customview_poolingcontainer = "androidx.customview:customview-poolingcontainer:${Versions.androidxCustomView}"

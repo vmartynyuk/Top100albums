@@ -6,7 +6,7 @@ import androidx.navigation.NavType
 import androidx.navigation.compose.composable
 import androidx.navigation.navArgument
 import ua.vmartyniuk.top100albums.core.navigation.Top100AlbumsNavigationDestination
-import ua.vmartyniuk.top100albums.feature.details.DetailsScreen
+import ua.vmartyniuk.top100albums.feature.details.DetailsRoute
 
 object DetailsDestination : Top100AlbumsNavigationDestination {
     const val albumIdArg = "albumId"
@@ -26,6 +26,6 @@ fun NavGraphBuilder.detailsGraph(onBackClick: () -> Unit) {
             navArgument(DetailsDestination.albumIdArg) { type = NavType.StringType }
         )
     ) {
-        DetailsScreen(onBackClick = onBackClick)
+        DetailsRoute(onBackClick = onBackClick)
     }
 }

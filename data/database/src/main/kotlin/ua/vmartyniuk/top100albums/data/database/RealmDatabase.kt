@@ -37,4 +37,8 @@ class RealmDatabase @Inject constructor() {
             delete(query<AlbumEntity>())
         }
     }
+
+    fun getAlbumByIdFlow(albumId: String): AlbumModel {
+        return realm.query<AlbumEntity>("id = $0", albumId).find().first().asModel
+    }
 }

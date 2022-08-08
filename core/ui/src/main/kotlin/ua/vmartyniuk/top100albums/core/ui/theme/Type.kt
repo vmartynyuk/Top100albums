@@ -52,10 +52,10 @@ internal val Top100AlbumsTypography = Typography(
         letterSpacing = (-0.04).sp,
     ),
     button = TextStyle(
-        fontFamily = FontFamily.Default,
-        fontWeight = FontWeight.Medium,
-        fontSize = 14.sp,
-        letterSpacing = (0.09).sp,
+        fontFamily = SFProText,
+        fontWeight = FontWeight.SemiBold,
+        fontSize = 16.sp,
+        letterSpacing = (-0.04).sp,
     ),
     caption = TextStyle(
         fontFamily = SFProText,

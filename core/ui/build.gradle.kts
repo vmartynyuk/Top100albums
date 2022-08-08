@@ -12,6 +12,7 @@ dependencies {
     debugApi(Libs.androidx_compose_ui_tooling)
     api(Libs.androidx_compose_ui_tooling_preview)
     api(Libs.androidx_compose_ui_util)
+    api(Libs.androidx_compose_ui_unit)
     api(Libs.androidx_compose_runtime)
 
     debugImplementation(Libs.androidx_customview_poolingcontainer)

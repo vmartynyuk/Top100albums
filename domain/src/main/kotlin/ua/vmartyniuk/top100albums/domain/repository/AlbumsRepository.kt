@@ -2,6 +2,7 @@ package ua.vmartyniuk.top100albums.domain.repository
 
 import android.util.Log
 import kotlinx.coroutines.flow.Flow
+import kotlinx.coroutines.flow.flow
 import ua.vmartyniuk.top100albums.core.model.AlbumModel
 import ua.vmartyniuk.top100albums.data.database.RealmDatabase
 import ua.vmartyniuk.top100albums.data.network.service.ApiService
@@ -23,6 +24,13 @@ class AlbumsRepository @Inject constructor(
         }.onFailure { error ->
             // todo: show error
             Log.d("TAG", "loadAlbums: ${error.message}")
+        }
+    }
+
+    fun getAlbum(albumId: String): Flow<AlbumModel> {
+        return flow {
+            val model = realmDatabase.getAlbumByIdFlow(albumId)
+            emit(model)
         }
     }
 }
