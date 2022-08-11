@@ -12,6 +12,7 @@ internal class AlbumEntity : RealmObject {
     var name: String = ""
     var artist: String = ""
     var imageUrl: String = ""
+    var url: String = ""
     var releaseDate: Date? = null
     var genres: String? = null
 
@@ -27,6 +28,7 @@ internal val AlbumEntity.asModel: AlbumModel
         artist = artist,
         imageUrl = imageUrl,
         releaseDate = releaseDate,
+        url = url,
         genres = genres?.split(GENRE_SEPARATOR) ?: emptyList()
     )
 
@@ -39,6 +41,7 @@ internal val AlbumModel.asEntity: AlbumEntity
             artist = model.artist
             imageUrl = model.imageUrl
             releaseDate = model.releaseDate
+            url = model.url
             genres = model.genres.joinToString(GENRE_SEPARATOR)
         }
     }

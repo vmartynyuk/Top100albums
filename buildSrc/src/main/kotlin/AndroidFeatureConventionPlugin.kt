@@ -19,6 +19,7 @@ class AndroidFeatureConventionPlugin : Plugin<Project> {
                 add("implementation", project(":domain"))
 
                 add("implementation", Libs.androidx_hilt_navigation_compose)
+                add("implementation", Libs.google_accompanist_systemuicontroller)
 
                 add("implementation", Libs.coilKt)
                 add("implementation", Libs.coilKt_compose)

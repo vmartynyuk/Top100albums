@@ -11,6 +11,7 @@ internal val FeedResponse.asModelList: List<AlbumModel>
             artist = response.artistName,
             imageUrl = response.artworkUrl100,
             releaseDate = response.releaseDate,
+            url = response.url,
             genres = response.genres.map { it.name }
         )
     }

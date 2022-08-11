@@ -22,6 +22,8 @@ object Libs {
     const val androidx_startup = "androidx.startup:startup-runtime:${Versions.androidxStartup}"
     const val coilKt = "io.coil-kt:coil:${Versions.coil}"
     const val coilKt_compose = "io.coil-kt:coil-compose:${Versions.coil}"
+    const val google_accompanist_systemuicontroller = "com.google.accompanist:accompanist-systemuicontroller:${Versions.accompanist}"
+    const val google_accompanist_flowlayout = "com.google.accompanist:accompanist-flowlayout:${Versions.accompanist}"
     const val hilt_android = "com.google.dagger:hilt-android:${Versions.hilt}"
     const val hilt_compiler = "com.google.dagger:hilt-android-compiler:${Versions.hilt}"
     const val kotlinx_serialization_json = "org.jetbrains.kotlinx:kotlinx-serialization-json:${Versions.kotlinxSerializationJson}"

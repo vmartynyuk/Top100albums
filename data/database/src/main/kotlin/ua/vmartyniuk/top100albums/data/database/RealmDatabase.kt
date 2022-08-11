@@ -2,6 +2,7 @@ package ua.vmartyniuk.top100albums.data.database
 
 import io.realm.kotlin.Realm
 import io.realm.kotlin.RealmConfiguration
+import io.realm.kotlin.ext.asFlow
 import io.realm.kotlin.ext.query
 import kotlinx.coroutines.flow.Flow
 import kotlinx.coroutines.flow.map
@@ -14,6 +15,7 @@ import javax.inject.Singleton
 
 @Singleton
 class RealmDatabase @Inject constructor() {
+
     private val realm: Realm by lazy {
         val configuration = RealmConfiguration.create(schema = setOf(AlbumEntity::class))
         Realm.open(configuration)
@@ -38,7 +40,8 @@ class RealmDatabase @Inject constructor() {
         }
     }
 
-    fun getAlbumByIdFlow(albumId: String): AlbumModel {
-        return realm.query<AlbumEntity>("id = $0", albumId).find().first().asModel
+    fun getAlbumByIdFlow(albumId: String): Flow<AlbumModel> {
+        return realm.query<AlbumEntity>("id = $0", albumId).asFlow()
+            .map { it.list.first().asModel }
     }
 }

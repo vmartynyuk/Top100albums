@@ -6,9 +6,8 @@ import androidx.compose.runtime.Composable
 
 @Composable
 fun Top100AlbumsTheme(content: @Composable () -> Unit) {
-    val darkTheme = isSystemInDarkTheme()
     MaterialTheme(
-        colors = if (darkTheme) Top100AlbumsDarkColors else Top100AlbumsLightColors,
+        colors = Top100AlbumsLightColors,
         typography = Top100AlbumsTypography,
         shapes = Top100AlbumsShapes,
         content = content

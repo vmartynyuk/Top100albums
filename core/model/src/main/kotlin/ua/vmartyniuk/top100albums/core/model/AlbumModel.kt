@@ -8,6 +8,7 @@ data class AlbumModel(
     val artist: String,
     val imageUrl: String,
     val releaseDate: Date?,
+    val url: String,
     val genres: List<String>
 ) {
     val smallImageUrl: String

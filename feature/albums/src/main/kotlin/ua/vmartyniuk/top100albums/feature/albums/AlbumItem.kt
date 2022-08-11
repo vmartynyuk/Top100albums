@@ -18,6 +18,7 @@ import coil.compose.AsyncImage
 import ua.vmartyniuk.top100albums.core.model.AlbumModel
 import ua.vmartyniuk.top100albums.core.ui.theme.AppColors
 import ua.vmartyniuk.top100albums.core.ui.theme.Top100AlbumsTheme
+import ua.vmartyniuk.top100albums.feature.albums.fake.AlbumsFakeData
 
 @Composable
 fun AlbumItem(
@@ -34,7 +35,8 @@ fun AlbumItem(
                 model = album.smallImageUrl,
                 contentDescription = null,
                 contentScale = ContentScale.Fit,
-                modifier = modifier.fillMaxSize()
+                modifier = modifier
+                    .fillMaxSize()
                     .clickable { onClick() },
             )
             Box(
@@ -70,37 +72,9 @@ fun AlbumItem(
 @Preview
 @Composable
 fun previewCard() {
-    Card {
-        Box(
-            contentAlignment = Alignment.BottomStart,
-            modifier = Modifier
-        ) {
-            Box(
-                modifier = Modifier
-                    .fillMaxWidth()
-                    .fillMaxHeight(0.5f)
-                    .background(
-                        brush = Brush.verticalGradient(
-                            colors = listOf(
-                                AppColors.Transparent,
-                                AppColors.Black75
-                            )
-                        )
-                    )
-            )
-            Column(modifier = Modifier.padding(12.dp)) {
-                Text(
-                    text = "Album name",
-                    color = AppColors.White,
-                    maxLines = 2,
-                    style = MaterialTheme.typography.body2,
-                )
-                Text(
-                    text = "Album artist",
-                    color = AppColors.Gray,
-                    style = MaterialTheme.typography.caption,
-                )
-            }
-        }
-    }
+    AlbumItem(
+        album = AlbumsFakeData.albums[0],
+        onClick = {},
+        modifier = Modifier.size(200.dp)
+    )
 }

@@ -15,6 +15,7 @@ fun Top100AlbumsNavHost(
     navController: NavHostController,
     onNavigateToDestination: (Top100AlbumsNavigationDestination, String) -> Unit,
     onBackClick: () -> Unit,
+    onVisitAlbumClick: (String) -> Unit,
     modifier: Modifier = Modifier,
     startDestination: String = AlbumsDestination.route
 ) {
@@ -30,7 +31,14 @@ fun Top100AlbumsNavHost(
                 )
             },
             nestedGraphs = {
-                detailsGraph(onBackClick)
+                detailsGraph(
+                    onBackClick = {
+                        onBackClick()
+                    },
+                    onVisitAlbumClick = { url ->
+                        onVisitAlbumClick(url)
+                    }
+                )
             }
         )
     }

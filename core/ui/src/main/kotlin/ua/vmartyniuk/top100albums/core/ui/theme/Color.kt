@@ -1,6 +1,5 @@
 package ua.vmartyniuk.top100albums.core.ui.theme
 
-import androidx.compose.material.darkColors
 import androidx.compose.material.lightColors
 import androidx.compose.ui.graphics.Color
 
@@ -21,9 +20,4 @@ internal val Top100AlbumsLightColors = lightColors(
     primary = AppColors.Blue,
     onPrimary = AppColors.White,
 
-)
-
-internal val Top100AlbumsDarkColors = darkColors(
-    primary = AppColors.DarkGray,
-    onPrimary = AppColors.White,
 )

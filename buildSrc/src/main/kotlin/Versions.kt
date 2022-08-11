@@ -1,5 +1,6 @@
 object Versions {
     const val androidGradlePlugin = "7.2.2"
+    const val accompanist = "0.25.0"
     const val androidxActivity = "1.5.1"
     const val androidxAppCompat = "1.4.2"
     const val androidxCore = "1.8.0"

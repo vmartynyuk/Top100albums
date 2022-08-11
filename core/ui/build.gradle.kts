@@ -15,5 +15,7 @@ dependencies {
     api(Libs.androidx_compose_ui_unit)
     api(Libs.androidx_compose_runtime)
 
+    api(Libs.google_accompanist_flowlayout)
+
     debugImplementation(Libs.androidx_customview_poolingcontainer)
 }

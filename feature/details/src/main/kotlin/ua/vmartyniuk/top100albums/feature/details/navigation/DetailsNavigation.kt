@@ -19,13 +19,19 @@ object DetailsDestination : Top100AlbumsNavigationDestination {
     }
 }
 
-fun NavGraphBuilder.detailsGraph(onBackClick: () -> Unit) {
+fun NavGraphBuilder.detailsGraph(
+    onBackClick: () -> Unit,
+    onVisitAlbumClick: (String) -> Unit,
+) {
     composable(
         route = DetailsDestination.route,
         arguments = listOf(
             navArgument(DetailsDestination.albumIdArg) { type = NavType.StringType }
         )
     ) {
-        DetailsRoute(onBackClick = onBackClick)
+        DetailsRoute(
+            onBackClick = onBackClick,
+            onVisitAlbumClick = onVisitAlbumClick
+        )
     }
 }
