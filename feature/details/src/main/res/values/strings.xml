@@ -1,0 +1,6 @@
+<?xml version="1.0" encoding="utf-8"?>
+<resources>
+    <string name="visit_the_album">Visit The Album</string>
+    <string name="released_date_format">Released %s</string>
+    <string name="copiright_format">Copyright %d Apple Inc. All rights reserved.</string>
+</resources>
